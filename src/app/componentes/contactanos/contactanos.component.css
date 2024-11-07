@@ -1,0 +1,18 @@
+.form{
+    height: 90vh;
+}
+
+.mensaje_envio{
+    border-radius: 10px;
+    transition: 0.2s;
+    height: 0%;
+    max-width: 300px;
+    top: 10%;
+    overflow: hidden;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.bi{
+    font-size: 50px;
+}

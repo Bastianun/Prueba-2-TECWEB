@@ -1,0 +1,106 @@
+<div class="container form">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.9438696494385!2d-70.29416985689069!3d-18.484099053019587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa997e88ae0e3%3A0x3d94d0eaeff916ef!2sCFT%20Estatal%20Arica%20y%20Parinacota!5e0!3m2!1ses!2scl!4v1729827797711!5m2!1ses!2scl"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-12 col-md-6 position-relative">
+            <div class="row">
+                <div class="col d-flex flex-column justify-content-center gap-4">
+                    <h5>Solicita los servicios</h5>
+                    <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+                        <div class="mb-3">
+                          <label for="labelNombre" class="form-label">Ingrese Nombre</label>
+                          <input formControlName="nombre" type="text" class="form-control" id="labelNombre" aria-describedby="nombreHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelApellido" class="form-label">Ingrese Apellido</label>
+                            <input formControlName="apellido" type="text" class="form-control" id="labelApellido" aria-describedby="apellidoHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelEmail" class="form-label">Ingrese un email</label>
+                            <input formControlName="email" type="email" class="form-control" id="labelEmail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelTelefono" class="form-label">Ingrese su numero de telefono</label>
+                            <input formControlName="text" type="text" class="form-control" id="labelTelefono" aria-describedby="telefonoHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelEdad" class="form-label">Ingrese un mensaje</label>
+                            <textarea formControlName="mensaje" type="text" class="form-control" id="labelEdad" aria-describedby="edadHelp"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>                              
+                    <div>
+                        <h5 class="text-center">Puedes contactarte por nuestras redes sociales</h5>
+                        <div class="row d-flex justify-content-center gap-4">
+                            <div class="col-1"><a href=""><i class="bi bi-facebook"></i></a></div>
+                            <div class="col-1"><a href=""><i class="bi bi-instagram"></i></a></div>
+                            <div class="col-1"><a href=""><i class="bi bi-whatsapp"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  [ngStyle]="{'height':aparecer(), 'padding':padding}" class="mensaje_envio position-absolute d-flex align-items-center">
+                <p *ngIf="datos_formulario!=null">Hola <b>{{datos_formulario.nombre}} </b><b>{{datos_formulario.apellido}}</b>, su mensaje ha sido enviado correctamente.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="container form  d-flex  justify-content-center gap-4">
+    <div class="container d-flex">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.9438696494385!2d-70.29416985689069!3d-18.484099053019587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa997e88ae0e3%3A0x3d94d0eaeff916ef!2sCFT%20Estatal%20Arica%20y%20Parinacota!5e0!3m2!1ses!2scl!4v1729827797711!5m2!1ses!2scl"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container d-flex align-items-center justify-content-center flex-column gap-4 position-relative">
+            <div class="row">
+              <h5>Solicita los servicios</h5>
+                <div class="col">
+                    <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+                        <div class="mb-3">
+                          <label for="labelNombre" class="form-label">Ingrese Nombre</label>
+                          <input formControlName="nombre" type="text" class="form-control" id="labelNombre" aria-describedby="nombreHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelApellido" class="form-label">Ingrese Apellido</label>
+                            <input formControlName="apellido" type="text" class="form-control" id="labelApellido" aria-describedby="apellidoHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelEmail" class="form-label">Ingrese un email</label>
+                            <input formControlName="email" type="email" class="form-control" id="labelEmail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelTelefono" class="form-label">Ingrese su numero de telefono</label>
+                            <input formControlName="text" type="text" class="form-control" id="labelTelefono" aria-describedby="telefonoHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelEdad" class="form-label">Ingrese un mensaje</label>
+                            <textarea formControlName="mensaje" type="text" class="form-control" id="labelEdad" aria-describedby="edadHelp"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                      </form>
+                </div>
+            </div>
+            <div class="row">
+                <h5 class="text-center">Puedes contactarte por nuestras redes sociales</h5>
+                <div class="row d-flex justify-content-center gap-4">
+                    <div class="col-1"><a href=""><i class="bi bi-facebook"></i></a></div>
+                    <div class="col-1"><a href=""><i class="bi bi-instagram"></i></a></div>
+                    <div class="col-1"><a href=""><i class="bi bi-whatsapp"></i></a></div>
+                </div>
+            </div>
+            <div  [ngStyle]="{'height':aparecer(), 'padding':padding}" class="mensaje_envio position-absolute d-flex align-items-center">
+                <p *ngIf="datos_formulario!=null">Hola <b>{{datos_formulario.nombre}} </b><b>{{datos_formulario.apellido}}</b>, su mensaje ha sido enviado correctamente.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>-->
