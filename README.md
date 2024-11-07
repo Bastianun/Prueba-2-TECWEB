@@ -1,4 +1,4 @@
-#INSTALE BOOSTRAP-ICONS
+# INSTALE BOOSTRAP-ICONS
 
 https://icons.getbootstrap.com/ Para el uso de los iconos de facebook,whatsapp e instagram
 
