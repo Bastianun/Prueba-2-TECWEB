@@ -1,3 +1,7 @@
+#INSTALE BOOSTRAP-ICONS
+
+https://icons.getbootstrap.com/ Para el uso de los iconos de facebook,whatsapp e instagram
+
 # WebSiteMercyDeveloper
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
